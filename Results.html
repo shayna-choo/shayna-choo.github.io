@@ -96,13 +96,22 @@
     <script>
         function displayResults() {
             // Retrieve the score from localStorage
-            const score = parseInt(localStorage.getItem('quizScore'), 10) || 0;
-            console.log("Loaded score: " + score);  // Debugging log
+            let score = parseInt(localStorage.getItem('quizScore'), 10) || 0;
+    
+            // Ensure the score never exceeds 5
+            if (score > 5) {
+                score = 5;
+                localStorage.setItem('quizScore', score); // Update localStorage
+            }
+    
+            console.log("Loaded score: " + score); // Debugging log
             const totalQuestions = 5; // Set the total number of questions in the quiz
             document.getElementById('score').textContent = `${score} / ${totalQuestions}`;
     
             // Display the result message based on the score
-            const resultMessage = score >= 3 ? "You have escaped Stacy! Good Job!!" : "Oh no...you failed to escape! Try again.";
+            const resultMessage = score >= 3 
+                ? "You have escaped Stacy! Good Job!!" 
+                : "Oh no...you failed to escape! Try again.";
             document.getElementById('result-message').textContent = resultMessage;
         }
     
@@ -115,6 +124,7 @@
         // Run the displayResults function when the page loads
         window.onload = displayResults;
     </script>
+    
     
 </head>
 <body>
