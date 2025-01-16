@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Lesson</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Space Grotesk', sans-serif; 
+            background-color: #f3f3f3; /* Light blue background */
+            color: #333;
+        }
+
+        /* Main Container */
+        .container {
+            width: 960px;
+            height: 540px;
+            background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGl2aXRiZHp1Y2llMjc1MGFqNnFveTFubmZwY2NxNzE4YjR2cnlrbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7bu8wWbyQyingb6M/giphy.gif');
+            background-size: cover; /* Ensures the GIF covers the entire container */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the GIF within the container */
+            border: 2px solid #dcdcdc;
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        @font-face {
+            font-family: 'Space Grotesk';
+            src: url('space-grotesk/SpaceGrotesk-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url('inter/Inter-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        /* Header */
+        .header {
+            font-family: 'Space Grotesk', sans-serif;
+            color: rgb(255, 255, 255);
+            padding: 12px;
+            background-color: #00000058;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            margin: auto; /* Center the header vertically and horizontally */
+            position: relative;
+            top: 21%;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content p, .content ul {
+            margin-bottom: 45px;
+            line-height: 1.6;
+        }
+
+        /* Questions Section */
+        .questions {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+        }
+
+        .question {
+            position: relative; /* Make sure the pseudo-element is positioned relative to the .question */
+            top: 1px;
+            padding: 15px 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: 0.3s;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin-top: 74PX;
+            margin-left: 398px;
+        }
+
+        .question::before {
+            content: "";
+            position: absolute;
+            top: 17.5px; /* Adjust to move the background behind the question */
+            left: -425px;
+            right: -425px;
+            bottom: -20px;
+            background-color: #00000058; /* Background color behind the .question */
+            border-radius: 10px; /* Match the border radius of the .question */
+            z-index: -1; /* Ensures the background is behind the .question */
+            pointer-events: none;
+        }
+
+
+        .question:hover {
+            background-color: #e8e8ff;
+        }
+
+        /* Button Styling */
+        .button {
+            font-family: 'Inter-Bold', sans-serif;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.7rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #357ab8;
+        }
+        a {
+            font-family: 'Inter-bold', sans-serif;
+            color: black;
+            text-decoration: none;
+        }
+        /* GIF Section */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Hello!</p>
+            <p>Welcome to the Generative AI Interactive Lesson</p>
+            <p>In the next 5-10 minutes, you'll explore the basics of Generative AI and then test your understanding.</p>
+            <p>Are You Ready?</p>
+        </div>
+        <div class="questions">
+            <!-- Wrap the div in an anchor tag with href to the page -->
+            <a href="page0_kidnapped.html">
+                <div class="question">I'M READY!</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
