@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction Design Lesson</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .container {
+            width: 960px;
+            height: 540px;
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+            background: url('https://t4.ftcdn.net/jpg/06/24/29/45/360_F_624294525_5Jg27OOYCZmww96jzkrzJ3xa0PD5AQBS.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards, hold 1s ease-in 2s;
+        }
+
+        .interactive {
+            position: absolute;
+            top: 72%;
+            left: 30%;
+            transform: translate(-50%, -50%) scale(1);
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+            opacity: 0;
+            transition: transform 2s ease-in-out;
+            animation: fadeIn 2s ease-in forwards, hold 1s ease-in 2s;
+        }
+
+        .interactive:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        .interactive:active {
+            animation: zoomIn 2s ease-in forwards;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: showText 1s ease-in forwards;
+            animation-delay: 2s; /* 1s fade in + 1s hold */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes hold {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes showText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            to {
+                transform: translate(-50%, -50%) scale(5);
+            }
+        }
+    </style>
+    <script>
+        function goToNextPage() {
+            setTimeout(() => {
+                window.location.href = "nextpage.html";
+            }, 2000); // Matches the animation duration of zoomIn
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <!-- Add an onclick event to the image -->
+        <img src="Purpleipad.png" alt="Interactive Book" class="interactive" onclick="window.location.href='page0_ipad_frontpage.html';">
+        <div class="text">Quick! Pick up the Ipad that Stacy has left behind to escape!</div>
+    </div>
+</body>
+
+</html>

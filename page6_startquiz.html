@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions - Escape the Maze</title>
+    <style>
+        @font-face {
+            font-family: 'Space Grotesk';
+            src: url('space-grotesk/SpaceGrotesk-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Space Grotesk-Bold';
+            src: url('space-grotesk/SpaceGrotesk-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url('inter/Inter-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Inter-Regular';
+            src: url('inter/Inter-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set the body to cover the full height of the page */
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #000;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main Container */
+        .container {
+            width: 960px;
+            height: 540px;
+            background-image: url('Startquiz_background.png');
+            background-size: cover; /* Ensures the GIF covers the entire container */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the GIF within the container */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.246);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Header styling */
+        h1 {
+            font-family: 'Space Grotesk-Bold', sans-serif;
+            font-size: 36px;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 145px;
+            background-color: rgba(0, 0, 0, 0.476); /* Adjust transparency */
+            padding: 10px 20px; /* Add padding for the background size */
+            border-radius: 8px; /* Rounded edges */
+        }
+
+        p {
+            font-family: 'Inter-Regular', sans-serif;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 30px;
+            max-width: 80%;
+            text-align: center; 
+            background-color: rgba(0, 0, 0, 0.467); /* Adjust transparency */
+            padding: 5px 15px; /* Add padding for the background size */
+            border-radius: 8px; /* Rounded edges */
+        }
+
+
+        /* Button styling */
+        .start-button {
+            font-family: 'Inter-Bold', sans-serif;
+            padding: 10px 15px;
+            font-size: 18px;
+            background-color: #3a813d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 5px;
+        }
+
+        .start-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 960px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .start-button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CONGRATULATIONS!</h1>
+        <p>You have now escaped Stacy's house by learning more about AI.</p>
+        <p>But you now have to escape the maze outside her house.</p>
+        <p>So let's put your knowledge to the test!</p>
+        <button class="start-button" onclick="window.location.href='Quiz1.html'">START TEST!</button>
+    </div>
+</body>
+</html>

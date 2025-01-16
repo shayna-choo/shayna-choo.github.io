@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Escape Challenge</title>
+    <style>
+        @font-face {
+            font-family: 'Space Grotesk';
+            src: url('space-grotesk/SpaceGrotesk-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Space Grotesk-Bold';
+            src: url('space-grotesk/SpaceGrotesk-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url('inter/Inter-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Inter-Regular';
+            src: url('inter/Inter-Regular.otf') format('opentype');
+            font-weight: regular;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            font-family: 'SpaceGrotesk', sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 960px;
+            height: 540px;
+            background-color: #252525;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            gap: 20px; /* Added gap between text elements */
+        }
+
+        .container h1 {
+            font-family: 'Space Grotesk-Bold', sans-serif;
+            font-size: 2rem;
+            color: #ff4d4d;
+        }
+
+        .container p {
+            font-family: 'Inter-Regular', sans-serif;
+            font-size: 1.2rem;
+            color: #f2f2f2;
+        }
+
+        .container button {
+            font-family: 'Inter-Bold', sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #ff4d4d;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .container button:hover {
+            background-color: #e63e3e;
+        }
+
+        @media (max-width: 960px) {
+            .container {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
+
+            .container h1 {
+                font-size: 2rem;
+            }
+
+            .container p {
+                font-size: 1rem;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OH NO YOU HAVE BEEN KIDNAPPED!</h1>
+        <p>STACY the robot insists everyone stays informed about Gen AI.</p>
+        <p>Knowing the basics is crucial to her!</p>
+        <p>You have 5 mins to learn 5 points about AI.</p>
+        <p>Quick! The answers will help you escape this torturous hell.</p>
+        <!-- Wrap the button with the anchor tag -->
+        <a href="page0_openthebook.html">
+            <button>OK!</button>
+        </a>
+    </div>
+</body>
+</html>
